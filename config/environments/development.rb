@@ -51,7 +51,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.action_cable.mount_path = "/cable"
-  config.action_cable.url = "'https://we-wolfin-backend.herokuapp.com/cable'"
+  config.action_cable.url = "https://we-wolfin-backend.herokuapp.com/cable"
   config.action_cable.allowed_request_origins = [%r{https?://\S+}]
 
 
