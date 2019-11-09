@@ -33,8 +33,8 @@ Rails.application.configure do
 
   # Mount Action Cable outside main process or domain.
   config.action_cable.mount_path = "/cable"
-  config.action_cable.url = "ws://10.198.70.248:3000/cable"
-  config.action_cable.disable_request_forgery_protection = true
+  config.action_cable.url = "'https://we-wolfin-backend.herokuapp.com/cable'"
+  config.action_cable.allowed_request_origins = [%r{https?://\S+}]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
