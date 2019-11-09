@@ -52,7 +52,7 @@ Rails.application.configure do
 
   config.action_cable.mount_path = "/cable"
   config.action_cable.url = "https://we-wolfin-backend.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = [%r{https?://\S+}]
+  config.action_cable.allowed_request_origins = ['https://we-wolfin-backend.herokuapp.com', 'https://we-wolfin-backend.herokuapp.com']
 
 
 end
