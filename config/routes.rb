@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount ActionCable.server => '/cable'
+  mount ActionCable.server, at: '/cable'
   resources :roles
   resources :users
   resources :games
