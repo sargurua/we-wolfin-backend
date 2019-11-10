@@ -50,7 +50,6 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  config.action_cable.mount_path = "/cable"
   config.action_cable.url = "wss://we-wolfin-backend.herokuapp.com/cable"
   config.action_cable.allowed_request_origins = ['https://we-wolfin-backend.herokuapp.com', 'https://we-wolfin-backend.herokuapp.com']
 

@@ -32,8 +32,8 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Mount Action Cable outside main process or domain.
-  config.action_cable.mount_path = "/cable"
-  config.action_cable.url = "wss://we-wolfin-backend.herokuapp.com/cable"
+
+  config.web_socket_server_url = "wss://we-wolfin-backend.herokuapp.com/cable"
   config.action_cable.allowed_request_origins = ['https://we-wolfin-backend.herokuapp.com', 'https://we-wolfin-backend.herokuapp.com']
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
@@ -103,5 +103,4 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
-  config.web_socket_server_url = "wss://action-cable-example.herokuapp.com/cable" 
 end
