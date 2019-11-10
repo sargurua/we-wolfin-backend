@@ -18,10 +18,11 @@ class GamesController < ApplicationController
 
     def show
         game = Game.find(1)
-        serialized_data = ActiveModelSerializers::Adapter::Json.new(
-        GameSerializer.new(game)
-        ).serializable_hash
-        ActionCable.server.broadcast 'games_channel', serialized_data
-        head :ok
+        render :json => game
+        # serialized_data = ActiveModelSerializers::Adapter::Json.new(
+        # GameSerializer.new(game)
+        # ).serializable_hash
+        # ActionCable.server.broadcast 'games_channel', serialized_data
+        # head :ok
     end
 end
