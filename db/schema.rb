@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_11_07_170538) do
     t.integer "num_players"
     t.integer "day"
     t.integer "night"
+    t.boolean "started", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
