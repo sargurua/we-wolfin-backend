@@ -6,7 +6,7 @@ class RolesController < ApplicationController
         roles[-2].hidden = true
         roles[-3].hidden = true
 
-        roles = roles.map do |role| 
+        roles.each do |role| 
             role.update(game_id: 1)
         end
 
