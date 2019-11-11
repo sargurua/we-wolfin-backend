@@ -16,8 +16,9 @@ class UsersController < ApplicationController
 
     def update
         user = User.find(params[:id])
-        role = params[:role]
-        user.update(role_id: role)
+        role = Role.find(params[:role])
+        role.update(game_id: 1)
+        user.update(role_id: role.id)
         render :json => user
     end
 end
