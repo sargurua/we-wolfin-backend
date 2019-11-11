@@ -5,19 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-Game.create(day: 4, night: 2, num_players: 4, started: false) 
-Game.create(day: 1, night: 7, num_players: 7)
-Game.create(day: 7, night: 3, num_players: 5)
-Game.create(day: 8, night: 7, num_players: 2)
-
-User.create(name: "Zac", game_id: 1)
-User.create(name: "Dee", game_id: 1)
-User.create(name: "Zac@Zac", game_id: 1)
-User.create(name: "Avi", game_id: 1)
+Role.create(name: "Werewolf")
+Role.create(name: "Seer")
+Role.create(name: "Robber")
+Role.create(name: "Troublemaker")
+Role.create(name: "Villager")
+Role.create(name: "Villager")
 
 
-User.create(name: "Dennis", game_id: 2)
-User.create(name: "Joseph", game_id: 2)
-User.create(name: "Zac@Zac", game_id: 2)
-User.create(name: "Avi", game_id: 2)
+
+
+
+
+# num_players     roles      roles
+# 3               6          1 - WereWolf, 1 - Seer, 1 - Robber
+#                             1 - TroubleMaker 2 - Villagers
