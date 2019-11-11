@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Game.create(day: 4, night: 2, num_players: 4)
+Game.create(day: 4, night: 2, num_players: 4, started: false) 
 Game.create(day: 1, night: 7, num_players: 7)
 Game.create(day: 7, night: 3, num_players: 5)
 Game.create(day: 8, night: 7, num_players: 2)

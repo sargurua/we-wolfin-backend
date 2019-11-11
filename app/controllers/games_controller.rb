@@ -25,4 +25,10 @@ class GamesController < ApplicationController
         # ActionCable.server.broadcast 'games_channel', serialized_data
         # head :ok
     end
+
+    def update
+        game = Game.find(1)
+        game.started = true
+        render :json => game
+    end
 end
