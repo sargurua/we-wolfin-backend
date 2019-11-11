@@ -1,6 +1,6 @@
 class RolesController < ApplicationController
     def index
         roles = Role.all
-        render :json => roles.to_json()
+        render :json => roles.shuffle.to_json()
     end
 end
