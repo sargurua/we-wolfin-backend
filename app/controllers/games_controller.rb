@@ -37,4 +37,26 @@ class GamesController < ApplicationController
         game.update(turn: params[:newTurn])
         render :json => game
     end
+
+    def robber
+        robber = User.all.find(params[:robber_id])
+        selected = User.all.find(params[:selected_id])
+
+        robber_role_id = robber.role.id
+        selected_role_id = selected.role.id
+
+        robber.update(role_id: selected_role_id)
+        selected.update(role_id: robber_role_id)
+    end
+
+    def trouble
+        first = User.all.find(params[:first_id])
+        second = User.all.find(params[:second_id])
+
+        first_role_id = first.role.id
+        second_role_id = second.role.id
+
+        first.update(role_id: second_role_id)
+        second.update(role_id: first_role_id)
+    end
 end

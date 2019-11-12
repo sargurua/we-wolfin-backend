@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   patch 'games/changeTurn', to: 'games#changeTurn'
 
+  patch 'games/robber', to: 'games#robber'
+
+  patch 'games/trouble', to: 'games#trouble'
+
   resources :roles
   resources :users
   resources :games
