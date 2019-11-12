@@ -31,4 +31,10 @@ class GamesController < ApplicationController
         game.update(started: params[:started])
         render :json => game
     end
+
+    def changeTurn
+        game = Game.find(1)
+        game.update(turn: params[:newTurn])
+        render :json => game
+    end
 end
