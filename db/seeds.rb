@@ -16,6 +16,7 @@ Role.create(name: "Troublemaker")
 Role.create(name: "Mason")
 Role.create(name: "Mason")
 Role.create(name: "Villager")
+Role.create(name: "Villager")
 
 #For testing components
 
