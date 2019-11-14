@@ -13,8 +13,8 @@ Role.create(name: "Insomniac")
 Role.create(name: "Seer")
 Role.create(name: "Robber")
 Role.create(name: "Troublemaker")
-Role.create(name: "Villager")
-Role.create(name: "Villager")
+Role.create(name: "Mason")
+Role.create(name: "Mason")
 Role.create(name: "Villager")
 
 #For testing components
