@@ -21,4 +21,24 @@ class UsersController < ApplicationController
         user.update(role_id: role.id)
         render :json => user
     end
+
+    def won
+        users = User.all
+
+        highestVotes = []
+
+        sorted = users.sort_by do |obj|
+            obj.votes
+        end
+
+        highestVoteCount = sorted.last.votes
+
+        users.each do |user|
+            if user.votes >= highestVoteCount && user.votes != 0
+                highestVotes.push(user)
+            end
+        end
+
+        render :json => highestVotes
+    end
 end

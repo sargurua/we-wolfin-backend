@@ -26,6 +26,11 @@ class GamesController < ApplicationController
         # head :ok
     end
 
+    def seperate
+        Game.destroy_all
+        User.destroy_all
+    end
+
     def update
         game = Game.find(params[:id])
         game.update(started: params[:started])
@@ -58,5 +63,11 @@ class GamesController < ApplicationController
 
         first.update(role_id: second_role_id)
         second.update(role_id: first_role_id)
+    end
+
+    def vote 
+        user = User.all.find(params[:user_id])
+        newVotes = user.votes += 1
+        user.update(votes: newVotes)
     end
 end

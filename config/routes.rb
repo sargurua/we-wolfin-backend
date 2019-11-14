@@ -7,6 +7,12 @@ Rails.application.routes.draw do
 
   patch 'games/trouble', to: 'games#trouble'
 
+  patch 'games/vote', to: 'games#vote'
+
+  get 'users/won', to: 'users#won'
+
+  get '/seperate', to: 'games#seperate'
+
   resources :roles
   resources :users
   resources :games
