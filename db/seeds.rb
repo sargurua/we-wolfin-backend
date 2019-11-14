@@ -7,9 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Role.create(name: "Werewolf")
+Role.create(name: "Werewolf")
+Role.create(name: "Minion")
+Role.create(name: "Insomniac")
 Role.create(name: "Seer")
 Role.create(name: "Robber")
 Role.create(name: "Troublemaker")
+Role.create(name: "Villager")
 Role.create(name: "Villager")
 Role.create(name: "Villager")
 

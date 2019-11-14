@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_11_07_170538) do
     t.integer "night"
     t.string "turn", default: "Werewolf"
     t.boolean "started", default: false
+    t.boolean "voting", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

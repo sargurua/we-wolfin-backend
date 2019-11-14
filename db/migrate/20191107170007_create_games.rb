@@ -6,6 +6,7 @@ class CreateGames < ActiveRecord::Migration[6.0]
       t.integer :night
       t.string  :turn , :default => "Werewolf"
       t.boolean :started, :default => false
+      t.boolean :voting, :default => false
       t.timestamps
     end
   end

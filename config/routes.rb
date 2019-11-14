@@ -11,7 +11,9 @@ Rails.application.routes.draw do
 
   get 'users/won', to: 'users#won'
 
-  get '/seperate', to: 'games#seperate'
+  get 'seperate', to: 'games#seperate'
+
+  patch 'games/votingTime', to: 'games#votingTime'
 
   resources :roles
   resources :users

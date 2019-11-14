@@ -7,7 +7,7 @@ class GamesController < ApplicationController
     def create
         game = Game.new(day: params[:day].to_i, night: params[:night].to_i, num_players: params[:num_players].to_i, started: false)
         if(game.save)
-            user = User.find_or_create_by(name: params[:name], game_id: game.id, role_id: 1)
+            user = User.find_or_create_by(name: params[:name], game_id: game.id)
             serialized_data = ActiveModelSerializers::Adapter::Json.new(
             GameSerializer.new(game)
             ).serializable_hash
@@ -63,6 +63,11 @@ class GamesController < ApplicationController
 
         first.update(role_id: second_role_id)
         second.update(role_id: first_role_id)
+    end
+
+    def votingTime
+        game = Game.all.first
+        game.update(voting: true)
     end
 
     def vote 
